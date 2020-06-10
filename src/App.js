@@ -1,26 +1,37 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import ReactDOM from 'react-dom';
+import Header from './component/Header'
+import articles from './data'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component{
+    render(){    
+        return(
+            <div>
+          <Header />
+          {console.log(articles)}
+          <section className="hero">
+            <div className="container">
+              <h2 className="heading"> Hero Section </h2>  
+            </div>
+          </section>
+          
+          <section className="article">
+          <div className="container">
+              <h2 className="heading">Articles</h2>
+              <div className="grid">
+              {articles.map(a=>{
+                   return<div className="grid-box"> <h2 className="heading">{a.title}</h2>
+                   <img src={a.urlToImage}/><br/>
+                   </div>   
+          })}
+          </div>
+        </div>
+    </section>             
+        </div>
+        )
+    }
 }
 
-export default App;
+ReactDOM.render( <App />, document.getElementById('root'))
+
+export default App

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task | Level 1 | React Element</title>
+  </head>
+  <style>
+    .container{
+      border: 1px solid #a3a3a3;
+    }
+  </style>
+  <body>
+    <!-- HTML Code Goes Here -->
+    <div id="root">
+
+    </div>
+    <script src="https://unpkg.com/react@16.13.1/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.13.1/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone@7.8.3/babel.js"></script>
+    <script type="text/babel">
+      // Your code goes here
+      function Card(){
+        return(
+          <div className="container">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSe8sTQDjFNi-830hWL8QY5HBhNhKPqItX8mvj-vQbLYg_jfWVr&usqp=CAU" />
+          <h1>Marketing</h1>
+          <h2>Finding customers for your new business </h2>
+          <p>Getting a new business off the ground is a lot of hard work. Here are five ideas you can use to find your first customers </p>
+          </div>
+        )
+      }
+      ReactDOM.render(<Card />,document.getElementById('root'))
+    </script>
+  </body>
+</html>

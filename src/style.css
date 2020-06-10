@@ -1,0 +1,45 @@
+.container {
+	width: 960px;
+	max-width: 100%;
+	padding: 20px;
+	margin: 0 auto;
+}
+.main-header .container {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+.main-nav ul {
+	margin: 1em 0 .5em;
+	text-align: center;
+}
+.main-nav li {
+	display: inline;
+}
+.main-nav a {
+	display: inline-block;
+	padding: .5em 1.5em;
+}
+.heading{
+    text-align: center;
+	margin: 0 auto;
+	font-size: 20px;
+}
+.grid{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 42px;
+}
+
+.grid-box {
+	border: 1px solid black;
+}
+
+h2 {
+	font-size: 20px;
+}
+
+img {
+	width: 100%;
+}

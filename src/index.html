@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task | Level 1 | React Element</title>
+    <style>
+      .heading{
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- HTML Code Goes Here -->
+    <div id="root">
+  
+    </div>
+    <input type="checkbox" >
+    <label>What are you learning</label>
+    <script src="https://unpkg.com/react@16.13.1/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.13.1/umd/react-dom.development.js"></script>
+    <script>
+      // JavaScript Code Goes Here
+      const heading=React.createElement('h1',{class:'heading'},'Hello React')
+      const checkbox=React.createElement('input',{type:'checkbox'},'What are you learning')
+      const multipleElements=React.createElement('div',{class:'container'},
+      React.createElement('input',{type:'checkbox'}),
+      React.createElement('p',{},'Learning React'),
+      React.createElement('span',{},'Delete')
+      )
+      const listItem=
+                    React.createElement('div',{},
+                    React.createElement('ul',{},
+                    [
+                      React.createElement('li',{},'one'),
+                      React.createElement('li',{},'two'),
+                      React.createElement('li',{},'three'),
+                    ]
+                    )
+                    )
+      ReactDOM.render(heading,document.getElementById('root'))
+      ReactDOM.render(checkbox,document.getElementById('root'))
+      ReactDOM.render(multipleElements,document.getElementById('root'))
+      ReactDOM.render(listItem,document.getElementById('root'))
+    </script>
+  </body>
+</html>
+
